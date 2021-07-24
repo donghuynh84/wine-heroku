@@ -86,6 +86,26 @@ st.write("""
 st.pyplot()
 
 
+# chart_data = pd.DataFrame(
+#     df[['airline', 'incidents_85_99', 'fatalities_00_14']]
+# )
+#
+# st.bar_chart(chart_data)
+
+chart_data = ([test_size_bar, max_depth_bar, accur])
+st.write("""
+### index 0 = test size
+### index 1 = max depth
+### index 2 = accuracy score""")
+st.write(chart_data)
+st.bar_chart(chart_data)
+
+# arr = (test_size_bar, max_depth_bar, accur)
+# fig, ax = plt.subplots()
+# ax.hist(arr, bins=20)
+#
+# st.pyplot(fig)
+
 
 if st.button("Show feature importance"):
 
